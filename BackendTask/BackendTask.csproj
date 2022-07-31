@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BackendTask.DataAccess\BackendTask.DataAccess.csproj" />
+    <ProjectReference Include="..\BackendTask.Models\BackendTask.Models.csproj" />
+    <ProjectReference Include="..\BackendTask.Services\BackendTask.Services.csproj" />
+  </ItemGroup>
+
+</Project>
