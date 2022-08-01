@@ -15,7 +15,7 @@ namespace BackendTask.Controllers {
             _service = service;
         }
 
-        [HttpGet("getall")]
+        [HttpGet]
         public async Task<IActionResult> GetAllUsers() { 
             
             var res = await _service.GetAllUsers();
@@ -23,9 +23,9 @@ namespace BackendTask.Controllers {
 
         }
 
-        [HttpGet]
+        [HttpGet("{username}")]
         [Authorize( Roles = "ADMIN,GUEST")]
-        public async Task<IActionResult> GetUserByUsername([FromQuery] string username) {
+        public async Task<IActionResult> GetUserByUsername(string username) {
         
             var user = await _service.GetUserByUsername(username);
             return Ok(user);
